@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lịch họp công ty</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        tr:hover {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Lịch họp công ty</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Ngày</th>
+                <th>Giờ</th>
+                <th>Nội dung cuộc họp</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <!-- Sử dụng rowspan để gộp 2 hàng có cùng ngày -->
+                <td rowspan="2">Thứ Hai (12/10)</td>
+                <td>08:30 - 10:00</td>
+                <td>Họp định kỳ đầu tuần - Ban Giám đốc</td>
+            </tr>
+            <tr>
+                <td>14:00 - 16:00</td>
+                <td>Triển khai dự án phần mềm mới</td>
+            </tr>
+            <tr>
+                <td>Thứ Ba (13/10)</td>
+                <!-- Sử dụng colspan để gộp 2 cột (Giờ và Nội dung) khi cuộc họp kéo dài cả ngày -->
+                <td colspan="2">Nghỉ toàn công ty - Du lịch dã ngoại hàng năm</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Thứ Tư (14/10)</td>
+                <td>09:00 - 11:30</td>
+                <td>Đánh giá tiến độ thiết kế UI/UX</td>
+            </tr>
+            <tr>
+                <td>13:30 - 15:00</td>
+                <td>Họp bộ phận Marketing & Sales</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
