@@ -1,0 +1,72 @@
+/* 1. Định dạng chung cho toàn trang (Bộ chọn thẻ body) */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    /* Có thể kết hợp ảnh nền họa tiết nhẹ hoặc chuyển sắc (background-image) */
+    background-image: linear-gradient(to bottom, #f5f5f5, #eaeaea);
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Định dạng tiêu đề (Bộ chọn thẻ header) */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+}
+
+/* 3. Định dạng ảnh đại diện (Bộ chọn class .avatar) */
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;          /* Làm tròn ảnh thành hình tròn */
+    border: 3px solid #4CAF50;   /* Đường viền xanh lá dày 3px */
+    margin: 20px;
+    object-fit: cover;           /* Giữ đúng tỉ lệ ảnh nếu ảnh gốc không vuông */
+}
+
+/* 4. Định dạng danh sách sở thích (Bộ chọn thẻ ul) */
+ul {
+    list-style-type: square;     /* Đổi dấu chấm thành hình vuông */
+    text-align: left;            /* Căn trái nội dung chữ bên trong danh sách */
+    display: inline-block;       /* Thu gọn khung ul vừa với nội dung để nằm giữa trang */
+    margin-top: 10px;
+}
+
+/* 5. Định dạng bảng liên hệ (Bộ chọn thẻ table, th, td) */
+table {
+    margin: auto;                /* Căn giữa bảng theo chiều ngang */
+    border-collapse: collapse;   /* Gộp đường viền kép thành đường viền đơn */
+    width: 50%;
+    background-color: white;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Định dạng liên kết trong bảng */
+td a {
+    color: #2e7d32;
+    text-decoration: none;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+/* 6. Định dạng chân trang (Bộ chọn thẻ footer) */
+footer {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ddd;
+}
