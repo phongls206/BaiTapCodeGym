@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành - Tạo Menu Dọc Dropdown</title>
+    <style>
+        /* Thiết lập chung cho tài liệu */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Vùng div chứa menu */
+        #menu {
+            width: 160px;
+        }
+
+        #menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Bộ chọn cho các phần tử trong danh sách (li) */
+        #menu li {
+            list-style: none;
+            position: relative;
+            width: 160px;
+            height: 30px;
+            padding: 0 20px;
+            background-color: black;
+            line-height: 30px;
+            cursor: pointer;
+            border-bottom: 1px solid #333;
+        }
+
+        /* Bộ chọn dành cho các liên kết bên trong các danh sách (thẻ a) */
+        #menu a {
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+
+        /* Hiệu ứng đổi màu nền khi di chuột qua phần tử (li) */
+        #menu li:hover {
+            background-color: #444;
+        }
+
+        /* Bộ chọn dành cho các danh sách con */
+        #menu ul ul {
+            position: absolute;
+            top: 0;
+            left: 160px;
+            visibility: hidden;
+        }
+
+        /* Hiển thị danh sách con khi di chuột qua phần tử ngoài tương ứng */
+        #menu li:hover > ul {
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="menu">
+        <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Sản phẩm</a>
+                <ul>
+                    <li><a href="#">Laptop</a></li>
+                    <li><a href="#">Điện thoại</a></li>
+                    <li><a href="#">Tablet</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Giới thiệu</a></li>
+            <li><a href="#">Dịch vụ</a>
+                <ul>
+                    <li><a href="#">Thiết kế Web</a></li>
+                    <li><a href="#">Lập trình App</a></li>
+                    <li><a href="#">SEO & Marketing</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Liên hệ</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành Tạo menu ngang Dropdown</title>
+    <style>
+        /* 1. Cố định phông chữ cho trang HTML và đặt phân vùng cho trình đơn */
+        #menu {
+            font-family: Arial, sans-serif;
+            height: 40px;
+            background-color: #333;
+            border-radius: 4px;
+            width: fit-content;
+        }
+
+        /* 2. Định nghĩa bộ chọn cho các phần tử trong danh sách (ul và li) */
+        #menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #menu li {
+            float: left; /* Đưa các mục menu cha nằm ngang hàng */
+            position: relative; /* Tạo mốc định vị cho menu con */
+        }
+
+        /* 3. Định nghĩa bộ chọn cho các liên kết trong trình đơn */
+        #menu a {
+            display: block;
+            width: 130px;
+            height: 40px;
+            line-height: 40px; /* Căn giữa văn bản theo chiều dọc */
+            color: #ffffff;
+            background-color: #333;
+            text-align: center;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* 4. Bộ chọn khi đưa con trỏ qua liên kết (chuyển sang màu đỏ) */
+        #menu a:hover {
+            background-color: #e74c3c; /* Màu đỏ */
+        }
+
+        /* 5. Bộ chọn dành cho các danh sách con (trình đơn con) */
+        #menu ul ul {
+            position: absolute;
+            top: 40px; /* Đặt menu con ngay bên dưới menu cha */
+            left: 0;
+            width: 130px;
+        }
+
+        /* 6. Bổ sung thuộc tính visibility để ẩn các trình đơn con mặc định */
+        #menu ul ul {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 130px;
+            visibility: hidden; /* Ẩn menu con ban đầu */
+        }
+
+        /* Đổi kiểu hiển thị của li cấp 2 thành block dọc khi xuất hiện */
+        #menu ul ul li {
+            float: none; 
+        }
+
+        /* 7. Hiển thị menu con mỗi khi con trỏ được đưa qua mục của trình đơn cha */
+        #menu li:hover > ul {
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cấu trúc danh sách lồng nhau (hai cấp) cho menu -->
+    <div id="menu">
+        <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Sản phẩm</a>
+                <ul>
+                    <li><a href="#">Điện thoại</a></li>
+                    <li><a href="#">Laptop</a></li>
+                    <li><a href="#">Máy tính bảng</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Tin tức</a>
+                <ul>
+                    <li><a href="#">Công nghệ</a></li>
+                    <li><a href="#">Đời sống</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Liên hệ</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
