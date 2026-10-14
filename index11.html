@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập: Tạo trang web với màu nền và ảnh nền</title>
+    <style>
+        /* 1. Thiết lập màu nền (background-color) cho toàn bộ trang web */
+        body {
+            background-color: #e0f2fe; /* Màu xanh dương nhạt */
+            font-family: Arial, sans-serif;
+            color: #1e293b;
+            margin: 0;
+            padding: 30px;
+            line-height: 1.6;
+        }
+
+        h1, p {
+            text-align: center;
+        }
+
+        /* 2. Thêm ảnh nền (background-image) và căn giữa nội dung trong khối <div> */
+        .important-content {
+            /* Sử dụng ảnh nền từ đường dẫn trực tuyến (hoặc đổi thành url('bg.jpg') nếu dùng ảnh trong máy) */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                              url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80');
+            background-size: cover;       /* Ảnh phủ kín toàn bộ khối div */
+            background-position: center;  /* Căn giữa bức ảnh nền */
+            background-repeat: no-repeat; /* Không lặp lại ảnh nền */
+
+            /* Căn giữa nội dung bên trong khối <div> */
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            /* Kích thước và trang trí thêm cho khối <div> */
+            max-width: 700px;
+            min-height: 250px;
+            margin: 25px auto;
+            padding: 30px;
+            color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Tiêu đề <h1> theo đúng yêu cầu -->
+    <h1>Chào mừng đến với trang web của tôi</h1>
+
+    <!-- Đoạn văn <p> mô tả trang web -->
+    <p>Đây là trang web thực hành cách kết hợp màu nền (background-color) và ảnh nền (background-image) bằng CSS.</p>
+
+    <!-- Khối <div> chứa nội dung quan trọng -->
+    <div class="important-content">
+        <h2>Thông báo quan trọng</h2>
+        <p>Khối nội dung này sử dụng thuộc tính <strong>background-image</strong> kết hợp căn giữa văn bản theo cả chiều ngang và chiều dọc.</p>
+    </div>
+
+</body>
+</html>
