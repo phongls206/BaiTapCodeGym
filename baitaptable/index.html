@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành: Bảng trong CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Thực hành: Định kiểu Bảng (Table) trong CSS</h1>
+
+    <!-- 1. Đường viền của bảng (Mặc định bị viền kép) -->
+    <h2>1. Đường viền cơ bản (border) - Xuất hiện đường viền kép</h2>
+    <table class="table-border">
+        <tr>
+            <th>Họ tên</th>
+            <th>Tuổi</th>
+            <th>Lớp</th>
+        </tr>
+        <tr>
+            <td>Nguyễn Văn A</td>
+            <td>20</td>
+            <td>Web</td>
+        </tr>
+        <tr>
+            <td>Trần Thị B</td>
+            <td>21</td>
+            <td>Web</td>
+        </tr>
+    </table>
+
+    <!-- 2. Gộp đường viền của bảng (border-collapse) -->
+    <h2>2. Gộp đường viền đơn (border-collapse: collapse)</h2>
+    <table class="table-collapse">
+        <tr>
+            <th>Họ tên</th>
+            <th>Tuổi</th>
+            <th>Lớp</th>
+        </tr>
+        <tr>
+            <td>Nguyễn Văn A</td>
+            <td>20</td>
+            <td>Web</td>
+        </tr>
+        <tr>
+            <td>Trần Thị B</td>
+            <td>21</td>
+            <td>Web</td>
+        </tr>
+    </table>
+
+    <!-- 3. Chiều rộng và chiều cao của bảng (width & height) -->
+    <h2>3. Chiều rộng 100% và chiều cao tiêu đề 50px (width & height)</h2>
+    <table class="table-size">
+        <tr>
+            <th>Họ tên</th>
+            <th>Tuổi</th>
+            <th>Lớp</th>
+        </tr>
+        <tr>
+            <td>Nguyễn Văn A</td>
+            <td>20</td>
+            <td>Web</td>
+        </tr>
+        <tr>
+            <td>Trần Thị B</td>
+            <td>21</td>
+            <td>Web</td>
+        </tr>
+    </table>
+
+    <!-- 4. Căn chỉnh theo chiều ngang (text-align) -->
+    <h2>4. Căn trái tiêu đề bảng (text-align: left)</h2>
+    <table class="table-align-horizontal">
+        <tr>
+            <th>Họ tên</th>
+            <th>Tuổi</th>
+            <th>Lớp</th>
+        </tr>
+        <tr>
+            <td>Nguyễn Văn A</td>
+            <td>20</td>
+            <td>Web</td>
+        </tr>
+        <tr>
+            <td>Trần Thị B</td>
+            <td>21</td>
+            <td>Web</td>
+        </tr>
+    </table>
+
+    <!-- 5. Căn chỉnh theo chiều dọc (vertical-align) -->
+    <h2>5. Căn dưới nội dung ô dữ liệu (vertical-align: bottom)</h2>
+    <table class="table-align-vertical">
+        <tr>
+            <th>Họ tên</th>
+            <th>Tuổi</th>
+            <th>Lớp</th>
+        </tr>
+        <tr>
+            <td>Nguyễn Văn A</td>
+            <td>20</td>
+            <td>Web</td>
+        </tr>
+        <tr>
+            <td>Trần Thị B</td>
+            <td>21</td>
+            <td>Web</td>
+        </tr>
+    </table>
+
+    <!-- 6. Khoảng đệm trong bảng (padding) -->
+    <h2>6. Tạo khoảng trống trong ô (padding: 15px)</h2>
+    <table class="table-padding">
+        <tr>
+            <th>Họ tên</th>
+            <th>Tuổi</th>
+            <th>Lớp</th>
+        </tr>
+        <tr>
+            <td>Nguyễn Văn A</td>
+            <td>20</td>
+            <td>Web</td>
+        </tr>
+        <tr>
+            <td>Trần Thị B</td>
+            <td>21</td>
+            <td>Web</td>
+        </tr>
+    </table>
+
+    <!-- 7. Màu sắc trong bảng (Kết hợp hoàn chỉnh) -->
+    <h2>7. Bảng hoàn chỉnh với màu sắc, căn chỉnh và khoảng đệm</h2>
+    <table class="table-complete">
+        <tr>
+            <th>Họ tên</th>
+            <th>Tuổi</th>
+            <th>Lớp</th>
+        </tr>
+        <tr>
+            <td>Nguyễn Văn A</td>
+            <td>20</td>
+            <td>Web</td>
+        </tr>
+        <tr>
+            <td>Trần Thị B</td>
+            <td>21</td>
+            <td>Web</td>
+        </tr>
+    </table>
+
+</body>
+</html>

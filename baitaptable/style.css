@@ -1,0 +1,141 @@
+/* Định dạng chung cho trang */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    margin: 24px;
+    color: #222;
+}
+
+h2 {
+    margin-top: 32px;
+    font-size: 18px;
+    color: #1e293b;
+}
+
+/* =====================================================
+   1. Đường viền của bảng (Xuất hiện đường viền kép)
+   ===================================================== */
+.table-border,
+.table-border th,
+.table-border td {
+    border: 1px solid black;
+}
+
+/* =====================================================
+   2. Gộp đường viền của bảng (border-collapse: collapse)
+   ===================================================== */
+.table-collapse {
+    border-collapse: collapse;
+}
+
+.table-collapse,
+.table-collapse th,
+.table-collapse td {
+    border: 1px solid black;
+}
+
+/* =====================================================
+   3. Chiều rộng và chiều cao của bảng (width & height)
+   ===================================================== */
+.table-size {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table-size,
+.table-size th,
+.table-size td {
+    border: 1px solid black;
+}
+
+.table-size th {
+    height: 50px;
+}
+
+/* =====================================================
+   4. Căn chỉnh theo chiều ngang (text-align)
+   ===================================================== */
+.table-align-horizontal {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table-align-horizontal,
+.table-align-horizontal th,
+.table-align-horizontal td {
+    border: 1px solid black;
+}
+
+.table-align-horizontal th {
+    text-align: left;
+}
+
+/* =====================================================
+   5. Căn chỉnh theo chiều dọc (vertical-align)
+   ===================================================== */
+.table-align-vertical {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table-align-vertical,
+.table-align-vertical th,
+.table-align-vertical td {
+    border: 1px solid black;
+}
+
+.table-align-vertical td {
+    height: 80px;
+    vertical-align: bottom;
+}
+
+/* =====================================================
+   6. Padding trong bảng
+   ===================================================== */
+.table-padding {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table-padding,
+.table-padding th,
+.table-padding td {
+    border: 1px solid black;
+}
+
+.table-padding th,
+.table-padding td {
+    padding: 15px;
+    text-align: left;
+}
+
+/* =====================================================
+   7. Màu sắc trong bảng (Kết hợp đầy đủ các thuộc tính)
+   ===================================================== */
+.table-complete {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-complete,
+.table-complete th,
+.table-complete td {
+    border: 1px solid black;
+}
+
+.table-complete th,
+.table-complete td {
+    padding: 15px;
+    text-align: left;
+}
+
+.table-complete th {
+    height: 50px;
+    background-color: #333;
+    color: white;
+}
+
+.table-complete td {
+    background-color: #f2f2f2;
+    color: #333;
+}
