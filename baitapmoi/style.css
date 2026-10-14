@@ -1,0 +1,90 @@
+/* Thiết lập cơ bản */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding-top: 70px; /* Đẩy nội dung xuống tránh bị header cố định che */
+    min-height: 1500px; /* Đảm bảo trang đủ dài để cuộn */
+}
+
+/* Header cố định */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.main-header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.main-header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-header nav ul li {
+    margin-left: 20px;
+}
+
+.main-header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Bố cục chính (sidebar + nội dung) sử dụng Flexbox */
+.page-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    gap: 20px;
+}
+
+.sidebar {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+    width: 200px;
+}
+
+.main-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    flex-grow: 1;
+}
+
+.sidebar h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+    color: #555;
+}
