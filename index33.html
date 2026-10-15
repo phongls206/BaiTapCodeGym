@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành Float và Overflow</title>
+    <style>
+        /* Reset box-sizing để padding và border không làm tăng kích thước tổng của thẻ */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 24px;
+            line-height: 1.5;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        /* Khối bao ngoài 2 cột */
+        .layout-wrapper {
+            width: 100%;
+            overflow: hidden; /* Giúp khung cha ôm trọn chiều cao của 2 cột float */
+            margin-bottom: 24px;
+            border: 1px solid #ccc;
+        }
+
+        /* Cột trái */
+        .col-left {
+            width: 50%;
+            float: left;
+            background-color: #e2e8f0;
+            padding: 20px;
+        }
+
+        /* Cột phải */
+        .col-right {
+            width: 50%;
+            float: right;
+            background-color: #bbf7d0;
+            padding: 20px;
+        }
+
+        /* Khối chứa nội dung dài có thanh cuộn */
+        .scroll-box {
+            clear: both; /* Ngăn khối này bị ảnh hưởng bởi float phía trên */
+            width: 350px;
+            height: 120px;
+            background-color: #fecaca;
+            padding: 12px;
+            border: 1px solid #f87171;
+            overflow: auto; /* Hiển thị thanh cuộn khi nội dung vượt quá chiều cao 120px */
+        }
+    </style>
+</head>
+<body>
+    <h1>Bố cục trang với float và overflow</h1>
+
+    <!-- Khối chứa 2 cột chia trái - phải -->
+    <div class="layout-wrapper">
+        <div class="col-left">
+            <h2>Cột bên trái</h2>
+            <p>Khối này sử dụng thuộc tính <code>float: left</code> để nằm về phía bên trái của khung chứa.</p>
+        </div>
+        <div class="col-right">
+            <h2>Cột bên phải</h2>
+            <p>Khối này sử dụng thuộc tính <code>float: right</code> để nằm về phía bên phải của khung chứa.</p>
+        </div>
+    </div>
+
+    <!-- Khối nội dung dài kiểm tra thanh cuộn (overflow) -->
+    <div class="scroll-box">
+        <p>
+            <strong>Khối kiểm tra Overflow:</strong> Khi chiều cao của văn bản bên trong vượt quá kích thước cố định của thẻ div (120px), thuộc tính <code>overflow: auto</code> sẽ tự động sinh ra thanh cuộn dọc để nội dung không bị tràn ra ngoài làm vỡ bố cục trang web. 
+            Bạn có thể thêm thật nhiều dòng chữ vào đây để thấy thanh cuộn hoạt động rõ ràng hơn. Việc kết hợp <code>clear: both</code> cũng giúp khối này luôn nằm tách biệt phía dưới 2 cột float ở trên.
+        </p>
+    </div>
+</body>
+</html>
